@@ -1,0 +1,11 @@
+.HeaderButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  height: 5vh;
+}
+.pagebtn {
+  height: 70%;
+  border-radius: 5px;
+  border-width: 2px;
+}

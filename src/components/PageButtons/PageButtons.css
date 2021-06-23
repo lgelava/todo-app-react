@@ -1,0 +1,6 @@
+.pagebuttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 3%;
+}
