@@ -5,22 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore, createStorm } from "redux";
 
-const initialState = { value: 0 };
-
-const incrementAction = { type: "INCREMENT" };
-
-const reducer = (state = 0, action) => {
-  if (action.type === "INCREMENT") {
-    return state + 1;
-  }
-  return state;
-};
-
-const store = createStore(reducer);
-store.subscribe(() => console.log("lukaia"));
-
-store.dispatch({ type: "INCREMENT" });
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

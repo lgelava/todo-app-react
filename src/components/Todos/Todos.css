@@ -1,0 +1,31 @@
+.maindivbtn {
+  color: #000000;
+  height: 30%;
+  width: 7%;
+}
+.editbtn {
+  height: 40%;
+  width: 5%;
+}
+.editinput {
+  height: 34%;
+  width: 25%;
+}
+.editdiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maininput {
+  width: 30%;
+}
+.applyandbackbtns {
+  height: 100%;
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "@material-ui/core/Button";
 import "./HeaderButtons.css";
 class HeaderButtons extends Component {
   render() {
@@ -11,20 +12,27 @@ class HeaderButtons extends Component {
       <div className="HeaderButtons">
         {mainlist.length > 0 ? (
           <>
-            <button
+            <Button
+              variant="contained"
+              color="primary"
               onClick={() => checkall()}
               ref={this.deleteallbtn}
               className="pagebtn"
             >
               {result ? "Uncheck All" : "Check All"}
-            </button>
+            </Button>
           </>
         ) : null}
 
         {result2 ? (
-          <button onClick={() => deleteall()} className="pagebtn">
+          <Button
+            onClick={() => deleteall()}
+            className="pagebtn"
+            variant="contained"
+            color="secondary"
+          >
             delete all
-          </button>
+          </Button>
         ) : (
           ""
         )}

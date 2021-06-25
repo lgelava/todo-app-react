@@ -3,4 +3,13 @@
   justify-content: center;
   flex-direction: row;
   margin-top: 3%;
+  height: 20%;
+}
+.smallbtns {
+  font-family: "robotu";
+  width: 4%;
+  height: 25%;
+  margin-left: 0.3%;
+  background-color: rgb(34, 44, 194);
+  font-size: 150%;
 }

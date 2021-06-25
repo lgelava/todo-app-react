@@ -16,7 +16,11 @@ class PageButtons extends Component {
       <>
         <div className="pagebuttons">
           {prosta.map((el) => (
-            <button onClick={() => changepagecount(el)} key={el}>
+            <button
+              onClick={() => changepagecount(el)}
+              key={el}
+              className="smallbtns"
+            >
               {el}
             </button>
           ))}
@@ -25,5 +29,5 @@ class PageButtons extends Component {
     );
   }
 }
-//buttonList.length > 0 &&
+
 export default PageButtons;

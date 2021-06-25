@@ -1,6 +1,6 @@
 .HeaderButtons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 2%;
   height: 5vh;
 }
@@ -8,4 +8,5 @@
   height: 70%;
   border-radius: 5px;
   border-width: 2px;
+  font-family: "robotu";
 }

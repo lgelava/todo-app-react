@@ -1,4 +1,6 @@
 import React, { Component, createRef } from "react";
+import Button from "@material-ui/core/Button";
+import Todos from "./Todos.css";
 class Todo extends Component {
   state = { status: false };
 
@@ -14,21 +16,38 @@ class Todo extends Component {
     return (
       <>
         {this.state.status ? (
-          <div>
-            <input ref={this.inputRef} defaultValue={`${itemInfo.content}`} />
-            <button
-              onClick={() =>
-                editTodo(
-                  itemInfo,
-                  this.inputRef.current.value,
-                  this.changeeditinputstatus
-                )
-              }
-            >
-              apply
-            </button>
+          <div className="editdiv">
+            <input
+              ref={this.inputRef}
+              defaultValue={`${itemInfo.content}`}
+              className="editinput"
+            />
 
-            <button onClick={() => this.changeeditinputstatus()}>back</button>
+            <div className="applyandbackbtns">
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => this.changeeditinputstatus()}
+                className="editbtn"
+              >
+                back
+              </Button>
+
+              <Button
+                variant="contained"
+                color="primary"
+                className="editbtn"
+                onClick={() =>
+                  editTodo(
+                    itemInfo,
+                    this.inputRef.current.value,
+                    this.changeeditinputstatus
+                  )
+                }
+              >
+                apply
+              </Button>
+            </div>
           </div>
         ) : (
           <>
@@ -39,9 +58,23 @@ class Todo extends Component {
               onChange={() => checkedodnot(itemInfo.id)}
             />
             <h1>{itemInfo.content}</h1>
-            <button onClick={() => deleteHandler(itemInfo.id)}>Delete</button>
+            <Button
+              onClick={() => deleteHandler(itemInfo.id)}
+              className="maindivbtn"
+              variant="contained"
+              color="secondary"
+            >
+              Delete
+            </Button>
 
-            <button onClick={() => this.changeeditinputstatus()}>Edit</button>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeeditinputstatus()}
+              className="maindivbtn"
+            >
+              Edit
+            </Button>
           </>
         )}
       </>
